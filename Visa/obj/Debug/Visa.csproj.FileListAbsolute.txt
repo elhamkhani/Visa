@@ -1,0 +1,6 @@
+C:\Projects\Visa\Visa\bin\Debug\Visa.exe.config
+C:\Projects\Visa\Visa\bin\Debug\Visa.exe
+C:\Projects\Visa\Visa\bin\Debug\Visa.pdb
+C:\Projects\Visa\Visa\obj\Debug\Visa.csprojResolveAssemblyReference.cache
+C:\Projects\Visa\Visa\obj\Debug\Visa.exe
+C:\Projects\Visa\Visa\obj\Debug\Visa.pdb
