@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div id="main"></div>
+<script type="text/javascript">
+
+
+    function createCORSRequest(method, url) {
+        var xhr = new XMLHttpRequest();
+        if ("withCredentials" in xhr) {
+            debugger;
+            xhr.open(method, url, true);
+            xhr.withCredentials = true;
+            xhr.setRequestHeader('Authorization', 'Basic ' + 'mehdikhanii@gmail.com:Mehdikhanii26842684');
+
+        } else if (typeof XDomainRequest != "undefined") {
+
+            xhr = new XDomainRequest();
+            xhr.open(method, url);
+
+        } else {
+            xhr = null;
+        }
+        return xhr;
+    }
+
+    var url= "https://www.visa4uk.fco.gov.uk/Appointment/GetTimeSlots?postId=587e0007-67d9-e511-95ad-005056922509&id=22%2F03%2F2017&count=%0A++++-1%0A++&preSelectedTime=&selectedPostVisaTypeId=984";
+    
+    var xhr = createCORSRequest('GET', url);
+    if (!xhr) {
+        throw new Error('CORS not supported');
+    } 
+
+  xhr.onload = function() {
+      $("#main").html(xhr.responseText);
+
+  };
+
+  xhr.onerror = function () {
+      debugger;
+        alert('Woops, there was an error making the request.' + xhr.statusText);
+    };
+
+    xhr.send();
+
+</script>
+</body>
+
+</html>
